@@ -1,0 +1,8 @@
+# Ignore Pipenv files
+Pipfile
+Pipfile.lock
+
+# Ignore Gradio cache/config folder
+.gradio/
+
+.env
