@@ -12,9 +12,6 @@ class YouTubeBlogGenerator:
         self.api_url = api_url
         aai.settings.api_key = self.api_key
 
-    # ---------------------------
-    # Clean YouTube URL
-    # ---------------------------
     def clean_youtube_url(self, url):
         parsed = urlparse(url)
         if 'youtu.be' in parsed.netloc:
@@ -25,9 +22,6 @@ class YouTubeBlogGenerator:
             return f"https://www.youtube.com/watch?v={video_id}" if video_id else url
         return url
 
-    # ---------------------------
-    # Download Audio
-    # ---------------------------
     def download_audio(self, link):
         ydl_opts = {
             'format': 'bestaudio/best',
@@ -52,9 +46,6 @@ class YouTubeBlogGenerator:
                 'filename': filename
             }
 
-    # ---------------------------
-    # Get Transcription
-    # ---------------------------
     def get_transcription(self, link):
         data = self.download_audio(link)
         audio_file = data['filename']
@@ -69,9 +60,6 @@ class YouTubeBlogGenerator:
             'transcription': transcript.text
         }
 
-    # ---------------------------
-    # Generate Blog from Transcript
-    # ---------------------------
     def generate_blog_from_transcription(self, transcription):
         prompt = (
             "Based on the following transcript from a YouTube video, write a comprehensive blog article. "
@@ -85,9 +73,6 @@ class YouTubeBlogGenerator:
         )
         return response.json().get("response", "No response from local model.")
 
-    # ---------------------------
-    # Main Method
-    # ---------------------------
     def generate_blog(self, yt_link):
         yt_link = self.clean_youtube_url(yt_link)
         result = self.get_transcription(yt_link)

@@ -1,7 +1,7 @@
 import torch
 import gradio as gr
 from transformers import pipeline
-from models.bt_to_text.video_to_text import YouTubeBlogGenerator
+from .video_to_text import YouTubeBlogGenerator
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,10 +11,8 @@ API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 MODEL_NAME = os.getenv("MODEL_NAME")
 API_URL = os.getenv("API_URL")
 
-model_path = ("../models/models--Falconsai--text_summarization/snapshots"
-              "/6e505f907968c4a9360773ff57885cdc6dca4bfd")
 
-texty = pipeline("summarization", model=model_path,torch_dtype=torch.bfloat16)
+texty = pipeline("summarization", model="Falconsai/text_summarization",torch_dtype=torch.bfloat16)
 
 
 
