@@ -16,7 +16,10 @@ Turn any YouTube video into a clean blog post plus a concise summary using Assem
 
 Here’s how the app looks when running:
 
-![App Screenshot](assets/app_screenshot.png)  
+![App Screenshot](/assest/image.png)
+-----------------------error-----------------------------
+error when server is not Start Yet
+![App Screenshot](/assest/Screenshot 2025-09-04 182738.png)  
 
 
 ---
