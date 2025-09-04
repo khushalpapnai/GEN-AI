@@ -16,7 +16,7 @@ Turn any YouTube video into a clean blog post plus a concise summary using Assem
 
 Here’s how the app looks when running:
 
-![App Screenshot](yt_Video_to_summerize_and_blog_text/assest/image.png)
+![App Screenshot]([yt_Video_to_summerize_and_blog_text/assest/image.png](https://github.com/khushalpapnai/GEN-AI/blob/1379a4787056d1fbbf5540210afc358da93e88cc/yt_Video_to_summerize_and_blog_text/assest/image.png))
 -----------------------error-----------------------------
 error when server is not Start Yet
 ![App Screenshot](/assest/Screenshot 2025-09-04 182738.png)  
