@@ -18,6 +18,10 @@ Here’s how the app looks when running:
 
 ![App Screenshot](https://github.com/khushalpapnai/GEN-AI/blob/1379a4787056d1fbbf5540210afc358da93e88cc/yt_Video_to_summerize_and_blog_text/assest/image.png?raw=true)
 
+When server is not Start yet!
+----------------------------- error ------------------------------------------------------------
+![App Screenshot](yt_Video_to_summerize_and_blog_text/assest/Screenshot%202025-09-04%20182738.png)
+
 
 
 ---
