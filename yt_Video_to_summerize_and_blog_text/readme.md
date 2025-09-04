@@ -7,7 +7,7 @@ Turn any YouTube video into a clean blog post plus a concise summary using Assem
 ## Live demo
 
 - [Live Demo](https://ef604358b9d1363a17.gradio.live/)  
-  - Replace the link above with your deployed URL (e.g., HF Spaces, Render, or a persistent Gradio endpoint).
+
 
 
 ## Features
@@ -129,4 +129,3 @@ Gradio will print a local URL. To share publicly for quick testing, you can enab
 
 ---
 
-If you share your live URL, I’ll update the README link for you and sanity-check the deployment settings.
