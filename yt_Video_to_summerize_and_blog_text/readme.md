@@ -20,7 +20,8 @@ Here’s how the app looks when running:
 
 When server is not Start yet!
 ----------------------------- error ------------------------------------------------------------
-![App Screenshot][(https://github.com/khushalpapnai/GENI/blob/d9a7843fa45c1ba0208dcadae2eb0739c85c441d/yt_Video_to_summerize_and_blog_text/assest/Screenshot%202025-09-04%20182738.png)
+![App Screenshot]![App Screenshot](https://github.com/khushalpapnai/GEN-AI/blob/d9a7843fa45c1ba0208dcadae2eb0739c85c441d/yt_Video_to_summerize_and_blog_text/assest/Screenshot%202025-09-04%20182738.png?raw=true)
+
 
 
 
