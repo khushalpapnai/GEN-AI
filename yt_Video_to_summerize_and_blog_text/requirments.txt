@@ -1,0 +1,19 @@
+# Core ML & AI
+torch
+torchvision
+torchaudio
+transformers
+huggingface_hub
+
+# Web UI
+gradio
+
+# APIs
+openai>=1.0.0
+assemblyai
+ffmpeg
+
+# Utilities
+yt_dlp
+python-dotenv
+requests
