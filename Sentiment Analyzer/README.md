@@ -25,12 +25,12 @@
 ### **1. Upload & Analyze**
 | Sentiments Finder |
 |--------------|
-| ![Sentiments Finder](Sentiment%20/Analyzer/asset/image.png) |
+| ![Sentiments Finder](https://raw.githubusercontent.com/khushalpapnai/GEN-AI/e758c0dbe342562ea91ac30aa8be8dd63f8f7305/Sentiment%20Analyzer/asset/Review.png) |
 
 ### **2. Add a New Review**
 | Review's Sentiments |
 |--------------|
-| ![Review's Sentiments](Sentiment%20Analyzer/asset/Review.png) | 
+| ![Review's Sentiments](https://raw.githubusercontent.com/khushalpapnai/GEN-AI/e758c0dbe342562ea91ac30aa8be8dd63f8f7305/Sentiment%20Analyzer/asset/image.png) | 
 
 *(Replace these with your actual screenshots or GIFs)*
 
