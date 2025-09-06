@@ -24,9 +24,11 @@ Users can upload a `.txt` file in **any supported language**, ask a query in the
 |  English to English |
 |---------------------|
 | ![App](asset/entoen.png) | 
+
 | Russian to Russian |
 |---------------------|
 | ![App](asset/rutoru.png) | 
+
 | English to Russian |
 |---------------------|
 | ![App](asset/entorn.png) | 
