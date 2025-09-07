@@ -1,0 +1,4 @@
+temm
+gradio
+torch
+transformers
