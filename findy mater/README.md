@@ -12,7 +12,9 @@ Users can choose to **paste an image URL** or **upload a file** — only one inp
 ---
 
 ## 📸 Demo
+
 | Show Case |
+
 ![Show](asset/dict.png)
 
 ---
