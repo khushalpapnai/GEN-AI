@@ -1,23 +1,19 @@
-/* Header styling */
 #header {
     color: #ff6600;
     font-weight: bold;
 }
 
 
-/* Output image container */
 #output_image {
     background-color: #fffbe6;
     border-radius: 8px;
     padding: 5px;
 }
 
-/* Make image fit without cropping */
 #output_image img {
     object-fit: contain !important;
 }
 
-/* Submit button styling */
 #detect_btn {
     background: linear-gradient(90deg, #ff7e5f, #feb47b) !important;
     color: white !important;
