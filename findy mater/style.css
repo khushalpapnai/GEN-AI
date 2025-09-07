@@ -1,0 +1,32 @@
+#header {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+#input_panel {
+    background-color: #e6f7ff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #b3e0ff;
+}
+
+#output_image {
+    background-color: #fffbe6;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#output_image img {
+    object-fit: contain !important;
+}
+
+
+#detect_btn {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b) !important;
+    color: white !important;
+    font-weight: bold;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 10px 16px !important;
+    font-size: 16px !important;
+}
