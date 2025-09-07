@@ -22,7 +22,7 @@ def image_to_image(input_type, url_input, file_input):
     if input_type == "Upload Image":
         image = Image.open(file_input).convert('RGB')
     else:
-        image = Image.open(requests.get(url_input,stream=True).raw()).convert('RGB')
+        image = Image.open(requests.get(url_input,stream=True).raw).convert('RGB')
     result = image_to_audio(image)
     return image,result
 
