@@ -1,9 +1,3 @@
-Got it — here’s a **polished, professional, and complete `README.md`** for your **Stable Diffusion + Gradio** image generation app.  
-It’s structured for GitHub or Hugging Face Spaces, with clear sections, step‑by‑step usage, and all the details someone needs to run it.
-
----
-
-````markdown
 # 🖼️ Imagery Generate — Stable Diffusion v1.5 Web App
 
 An interactive web application that generates **safe, friendly images** from text prompts using **Stable Diffusion v1.5**.  
