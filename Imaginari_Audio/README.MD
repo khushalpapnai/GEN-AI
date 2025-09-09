@@ -6,7 +6,7 @@ Built with [Gradio](https://gradio.app/), [Hugging Face Transformers](https://hu
 ---
 
 ## 🚀 Live Demo
-[![Open in Browser](https://img.shields.io/badge/Live%20Demo-Click%20Here-orange?style=for-the-badge)](https://your-live-demo-link-here)
+[![Open in Browser](https://img.shields.io/badge/Live%20Demo-Click%20Here-orange?style=for-the-badge)](https://huggingface.co/spaces/liljujutsu/Imaginary_Audio)
 
 ---
 
