@@ -7,7 +7,7 @@ from diffusers import DiffusionPipeline
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.float16 if device == "cuda" else torch.float32
-
+#Image_to_pixar
 Assist = hf_pipeline(
     "image-to-text",
     model="Salesforce/blip-image-captioning-base", 
