@@ -5,25 +5,16 @@ from PIL import Image
 from transformers import pipeline as hf_pipeline
 from diffusers import DiffusionPipeline
 
-# ---------------------------
-# Device & dtype auto-detect
-# ---------------------------
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.float16 if device == "cuda" else torch.float32
 
-# ---------------------------
-# Captioning model (run on CPU to save VRAM)
-# ---------------------------
 Assist = hf_pipeline(
     "image-to-text",
-    model="Salesforce/blip-image-captioning-base",  # small captioning model
+    model="Salesforce/blip-image-captioning-base", 
     torch_dtype=torch.float32,
-    device=-1  # force CPU
+    device=-1  
 )
 
-# ---------------------------
-# Load SDXL Base + Refiner with VRAM optimizations
-# ---------------------------
 print("Loading SDXL Base...")
 base = DiffusionPipeline.from_pretrained(
     "stabilityai/stable-diffusion-xl-base-1.0",
@@ -42,7 +33,6 @@ refiner = DiffusionPipeline.from_pretrained(
     use_safetensors=True
 )
 
-# Apply memory optimizations
 base.enable_sequential_cpu_offload()
 refiner.enable_sequential_cpu_offload()
 base.enable_attention_slicing()
@@ -50,9 +40,7 @@ refiner.enable_attention_slicing()
 base.enable_vae_slicing()
 refiner.enable_vae_slicing()
 
-# ---------------------------
-# Pixar/Disney/Cartoon generator
-# ---------------------------
+
 def Kids_World(url_file, url_path, file_path):
     # Load image from URL or file
     if url_file == "Upload Image":
@@ -60,24 +48,21 @@ def Kids_World(url_file, url_path, file_path):
     else:
         image = Image.open(requests.get(url_path, stream=True).raw).convert("RGB")
 
-    # Generate caption
     texty = Assist(image)
     prompt = f"{texty[0]['generated_text']}, pixar, disney, cartoon"
 
-    # SDXL parameters
-    n_steps = 5  # reduce steps to save VRAM
+
+    n_steps = 5 
     high_noise_frac = 0.8
 
-    # Run base model (latent output)
     base_output = base(
         prompt=prompt,
         num_inference_steps=n_steps,
         denoising_end=high_noise_frac,
         output_type="latent"
     )
-    latents = base_output.images  # `images` is latents when output_type="latent"
+    latents = base_output.images  
 
-    # Run refiner on latents
     result = refiner(
         prompt=prompt,
         num_inference_steps=n_steps,
@@ -87,9 +72,7 @@ def Kids_World(url_file, url_path, file_path):
 
     return result
 
-# ---------------------------
-# Theme
-# ---------------------------
+
 theme = gr.themes.Soft(
     primary_hue="orange",
     secondary_hue="blue",
@@ -101,18 +84,13 @@ theme = gr.themes.Soft(
     block_border_color="#ddd"
 )
 
-# ---------------------------
-# Toggle visibility of inputs
-# ---------------------------
 def toggle_inputs(choice):
     if choice == "Image URL":
         return gr.update(visible=True), gr.update(visible=False)
     else:
         return gr.update(visible=False), gr.update(visible=True)
 
-# ---------------------------
-# Gradio UI
-# ---------------------------
+
 with gr.Blocks(theme=theme, css=open("style.css").read()) as grad:
     gr.Markdown("## 🖼️ Generate Pixar/Disney/Cartoon Image", elem_id="header")
 
@@ -133,7 +111,6 @@ with gr.Blocks(theme=theme, css=open("style.css").read()) as grad:
                 show_download_button=True
             )
 
-    # Events
     input_type.change(toggle_inputs, inputs=input_type, outputs=[url_input, file_input])
     submit_btn.click(
         Kids_World,
