@@ -1,0 +1,8 @@
+torch
+transformers
+diffusers
+accelerate
+safetensors
+pandas
+openpyxl
+streamlit
