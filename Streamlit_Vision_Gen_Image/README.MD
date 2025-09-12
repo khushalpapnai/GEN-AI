@@ -1,4 +1,4 @@
-# Don't just redepoly my code, by just changing name rethar understand only, Cerate your own
+# Please don’t simply redeploy my code with a name change; take the time to understand it and build your own version.
 # 🎨 AI Image Generator with Style Presets
 
 An AI-powered image generator built with **Streamlit** and **Stable Diffusion XL**, allowing users to blend their own prompts with preset artistic styles stored in an Excel file.  
