@@ -13,12 +13,12 @@ if __name__ =="__main__":
     # from linear regression using fit for predict
     reg.fit(X,y)
 
-    # # slope coefficient
-    # coef = reg.coef_
-    # print(coef)
-    #
-    # intercept = reg.intercept_
-    # print(intercept)
+    # slope coefficient
+    coef = reg.coef_
+    print(coef)
+
+    intercept = reg.intercept_
+    print(intercept)
 
     print(moviesColl.describe())
     pyl.figure(figsize=(12,10))
